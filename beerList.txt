@@ -1,0 +1,69 @@
+Lite American Lager
+Standard American Lager
+Munich Helles
+Dortmunder Export
+German Pilsner
+Bohemian Pilsener
+Classic American Pilsner
+Vienna Lager
+Marzen
+Dark American Lager
+Munich Dunkel
+Schwarzbier
+Maibock
+Bock
+Doppelbock
+Eisbock
+Cream Ale
+Blonde Ale
+Kolsch
+American Wheat
+German Altbier
+California Common Beer
+Dusseldorf Altbier
+English Pale Ale
+Scotch Ale
+Irish Red Ale
+American Pale Ale
+Amber Ale
+Brown Ale
+English Brown Ale
+Baltic Porter
+Porter
+Dry Stout
+Oatmeal Stout
+American Stout
+Russian Imperial Stout
+Milk Stout
+Coffee Milk Stout
+Dessert Stout
+Breakfast Stout
+English IPA
+American IPA
+Imperial IPA
+Session IPA
+New England IPA
+Hazy IPA
+Weizen
+Dunkelweizen
+Weizenbock
+Roggenbier
+Witbier
+Belgian Pale Ale
+French Saison
+Belgian Saison
+Biere de Garde
+Berliner Weisse
+Flanders Red Ale
+Oud Bruin
+Straight Lambic
+Fruit Lambic
+Gueuze
+Belgian Blonde 
+Belgian Dubbel
+Belgian Tripel
+Belgian Golden Strong
+Belgian Quad
+Old Ale
+Barleywine
+Rauchbier
