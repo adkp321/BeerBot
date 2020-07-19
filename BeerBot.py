@@ -86,7 +86,7 @@ async def drink(ctx):
     await ctx.send('You are right!')
   else:
     await ctx.send('It is actually {}, DRINK!'.format(answer))
- @client.command()
+@client.command()
 async def survey(ctx):
     def is_correct(m):  #This makes sure that the bot only responds to the person who initilized the survey command on discord-
       return m.author == ctx.author
