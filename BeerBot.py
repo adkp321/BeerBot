@@ -4,11 +4,14 @@ I do not know if I will leave it or comment it out. I do know that on my persona
 want to leave a majority of the 'fluff' for anyone who might find it useful.
 """
 
+#Look there are a ton of ways to solve a problem but this one is mine.
+
+
 !pip install tensorflow #this is a machine learning library we're going to use to do stuff with the data we collect
 !pip install gym #not sure if I'll use tensorflow or gym
 !pip install discord #this is the discord api
 
-import tensorflow 
+import tensorflow as tf
 import keras
 import discord
 import random
@@ -17,7 +20,8 @@ import logging
 import csv
 import numpy as np
  
- 
+TOKEN = 'your token'
+
 # Creates a logger file 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -136,3 +140,29 @@ client.run(TOKEN)
 
 from google.colab import files
 uploaded = files.upload()
+
+"""
+Right now, 7/19/2020, I am not yet uploading the tensorflow (machine learning) portion of this code. I am still editing that section of the code while I gather data.
+What we have here though is interesting enough on its own. We have a discord bot that logs events that it observes and saves them for us. As well this discord bot 
+can deploy a very powerful social survey. Special thanks to Patrick, this survey is made to help identify beer preference of the user. The questions have been listed
+in order of importance with two fail safe questions at the end. Any survey that comes back with a 'no' response in question 11 will result in the survey being removed 
+from the data set. This is done because we are attempting to predict a preferred beer choice and if a user does not like a beer we want to remove that data from the dataset
+this way we can hopefully prevent bias. The very last question hopefully will work similarly. Asking someone 'are you having a nice day?' will hopefully help us weed out bias
+data of people in a bad mood. This is because we are assuming that people in a bad mood will give a bad review and that people having a bad day will give a bad review. However, 
+unlike question 11 where we expect to throw out data for a 'No' answer, question 12 will be one of the most interesting to watch. We can say at this point a way to improve 
+this study would be to look at the 'do you like it' question and change it from a boolean (true,false/yes,no) to a scalar (0-4) like we did with some of the other questions
+in the survey. For our purpose we want to be extremely specific and we want to keep it simple (following the KISS method). Thus, we are going to keep the yes/no boolean
+response for the 'do you like it' question.
+
+Thank you for reading this massive comment section. Up next I will be adding the tensorflow, machine learning portion of the code. After there will be a section that allows
+a discord user to enter inputs for a desired beer using the questions from the survey and the AI will produce a suggestion. Beer data gathered from the survey will be normalized
+to the NBA (National Brewers Association) beer styles list. When the program is fully applied we hope to be able to do two type of suggestions. For craft breweries,
+we want to suggest a beer style to the user and then prompt them to talk to a beertender to find something that matches that suggestion. This is hopefully going to be used
+to open a dialague between customers and craft breweries about styles they never knew they could enjoy. The other application would be to have a beer list input, a list of 
+beers a user has readily avaliable. In this case the NBA styles list would be mapped to that list of beers to suggest a user the specific beer that matches their input exactly. 
+The major issue with option two involves having an informed person mapping the beer data avaliable to the styles from the NBA. In the future it would be ideal that 
+brewers do the mapping of the beers that they create themselves. I would like to impliment a way for them to do that in a future version.
+
+Thank you again, look for more updates and please add BeerBot to you discord server run the survey if you would like to contribute to data collection for this beer suggestion AI
+"""
+
