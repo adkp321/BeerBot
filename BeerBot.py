@@ -45,7 +45,7 @@ async def on_ready():
         handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
         handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
         logger.addHandler(handler)
-        print('BeerBot2.0 Logged')
+        print('BeerBot Logged')
 @client.command()
 async def ping(ctx):
         await ctx.send(f'{round(client.latency*1000)} ms. Pong!')
