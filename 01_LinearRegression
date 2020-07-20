@@ -16,6 +16,7 @@ import tensorflow as tf
 
 
 # Load dataset. df is dataframe
+
 dftrain = pd.read_csv('https://storage.googleapis.com/tf-datasets/titanic/train.csv') # training data
 dfeval = pd.read_csv('https://storage.googleapis.com/tf-datasets/titanic/eval.csv') # testing data
 #pop out a column
