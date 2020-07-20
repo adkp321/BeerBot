@@ -19,8 +19,6 @@ import asyncio
 import logging
 import csv
 import numpy as np
- 
-TOKEN = 'your token'
 
 # Creates a logger file 
 logger = logging.getLogger('discord')
@@ -33,6 +31,10 @@ logger.addHandler(handler)
 with open("beerList.txt", "r") as beerList: #i need to add code to import this beer list
     beers = beerList.readlines()
 print(beers)
+
+#Added this line of code so I can save the token to a txt file and only load it in when I need it instead of saving it directly in the program as I had it before.
+with open("token.txt", "r") as token
+  TOKEN = token.readline()
 
 from discord.ext import commands
  
