@@ -39,7 +39,10 @@ with open("token.txt", "r") as token:
 from discord.ext import commands
  
 client = commands.Bot(command_prefix = '.') #prefix for the commnands
-
+"""
+In the future, we would only use the logger file to collect data. Then parse that data into usable info to train the AI.
+For now I am using a carefully crafted survey to get specific data about beer preferences.
+"""
 @client.event
 async def on_ready():
         logger = logging.getLogger('discord')
