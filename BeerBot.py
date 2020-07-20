@@ -33,7 +33,7 @@ with open("beerList.txt", "r") as beerList: #i need to add code to import this b
 print(beers)
 
 #Added this line of code so I can save the token to a txt file and only load it in when I need it instead of saving it directly in the program as I had it before.
-with open("token.txt", "r") as token
+with open("token.txt", "r") as token:
   TOKEN = token.readline()
 
 from discord.ext import commands
