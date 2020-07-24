@@ -27,8 +27,8 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
  
-# Loads in the list of beers from the text document, 71 beers total at the moment.
-with open("beerList.txt", "r") as beerList: #i need to add code to import this beer list
+# Loads in the list of beers from the text document, 69 beers total at the moment.
+with open("beerList.txt", "r") as beerList:
     beers = beerList.readlines()
 print(beers)
 
@@ -38,7 +38,7 @@ with open("token.txt", "r") as token:
 
 from discord.ext import commands
  
-client = commands.Bot(command_prefix = '.') #prefix for the commnands
+client = commands.Bot(command_prefix = '.') #prefix for the commands
 """
 In the future, we would only use the logger file to collect data. Then parse that data into usable info to train the AI.
 For now I am using a carefully crafted survey to get specific data about beer preferences.
@@ -71,7 +71,7 @@ async def test (ctx):
 
 @client.command()
 async def version(ctx):
-        await ctx.send('v0.01') #BETA VERSION MOTHERFUCKERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        await ctx.send('v0.01') 
 @client.command()
 async def drink(ctx):
   await ctx.send("It is time once again for everyone's favorite drinking game!!!!!!!!!!!!!!!")
@@ -127,7 +127,7 @@ async def survey(ctx):
       q8 = await client.wait_for('message',check=is_correct, timeout = 500.0)
 
       await ctx.send("For these final questions please give specific answers")
-      await ctx.send("Question 9. Specific aroma? (i.e. Spicy, Earthy, Floral, Herbal, Fruity, Malty, or DC)")
+      await ctx.send("Question 9. Specific aroma? (i.e. Spicy, Earthy, Floral, Hoppy, Herbal, Fruity, Malty, or DC)")
       q9 = await client.wait_for('message',check=is_correct, timeout = 500.0)
 
       await ctx.send("Question 10. What Beer are you drinking?")
